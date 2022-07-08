@@ -29,5 +29,5 @@ if __name__ == "__main__":
     count_df = count_by_country(partitioned_survey_df)
     print(count_df.collect()[0]['Country'])
 
-    logger.info("Finished HelloSpark")
+    logger.info("Finished HelloSparks")
     spark.stop()
