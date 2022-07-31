@@ -10,16 +10,14 @@ def checkAmstrong(n):
     else:
         print("It is not an amstrong number")
         # return amg
-# checkAmstrong(173)
-# print(15//10)
-sum=0
-for i in range(1,101):
-    sum=sum+i
-# print(sum)
+# Read Jason File using oy soark
+from pyspark.sql import SparkSession
 
-a=10
-b=20
-a=a+b
-b=a-b
-a=a-b
-print(a,b)
+spark= SparkSession.builder.appName("test").master("local[3]").getOrCreate()
+# print(spark.version)
+
+spark.read.option("inferSchema",True).json("C:/Users/itsva/OneDrive/Desktop/Test1.json").show()
+
+
+
+
